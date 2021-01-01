@@ -41,7 +41,6 @@ public class Day1_CheckArrayFormationThroughConcatenation {
 
     public static void main(String[] args) {
         Day1_CheckArrayFormationThroughConcatenation obj = new Day1_CheckArrayFormationThroughConcatenation();
-//        System.out.println(obj.canFormArray(new int[]{91,4,64,78}, new int[][]{{78},{4,64},{91}}));
         System.out.println(obj.canFormArray(new int[]{1,2,3}, new int[][]{{2},{1,3}}));
     }
 }
