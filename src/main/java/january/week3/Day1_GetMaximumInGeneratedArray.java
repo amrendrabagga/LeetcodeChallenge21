@@ -1,4 +1,4 @@
-package week3;
+package january.week3;
 
 public class Day1_GetMaximumInGeneratedArray {
     public int getMaximumGenerated(int n) {
