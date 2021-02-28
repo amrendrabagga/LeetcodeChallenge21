@@ -8,7 +8,18 @@ public class Day7_MaximumFrequencyStack {
     Map<Integer, Integer> frequencyMap;
     Map<Integer, Stack<Integer>> sameFrequencyMap;
     int maxFrequency = 0;
+
+    /**
+     * Here we are maintaining 2 map, one storing frequency of each integer being pushed,
+     * other map stores element in stack(map value) for same level,
+     * for example[5,7,5,7,4,5] for for first occurence of element they are stored in
+     * map<1, stack<integer>> -> (1, [5,7,4])
+     * map<2, stack<integer>> -> (2, [5,7])
+     * map<3, stack<integer>> -> (2, [5])
+     * elements are now removed as per maximum frequency for which we maintain instance level variable - maxFrequency
+     */
     public Day7_MaximumFrequencyStack() {
+
         frequencyMap = new HashMap();
         sameFrequencyMap = new HashMap();
     }
