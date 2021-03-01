@@ -15,7 +15,7 @@ public class Day7_MaximumFrequencyStack {
      * for example[5,7,5,7,4,5] for for first occurence of element they are stored in
      * map<1, stack<integer>> -> (1, [5,7,4])
      * map<2, stack<integer>> -> (2, [5,7])
-     * map<3, stack<integer>> -> (2, [5])
+     * map<3, stack<integer>> -> (3, [5])
      * elements are now removed as per maximum frequency for which we maintain instance level variable - maxFrequency
      */
     public Day7_MaximumFrequencyStack() {
