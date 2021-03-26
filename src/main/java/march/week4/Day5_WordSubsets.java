@@ -8,8 +8,8 @@ public class Day5_WordSubsets {
         // so we maintain maxFrequencyCount of every letter in B
         // say B has [e, oe, oooeee, ga]
         // maxFrequencyCount will look like [a -> 1, b -> 0 ... e ->3, g -> 1, o -> 3]
-        // now for each work in A we check whether freq of each word is less than its maxfreq
-        // if yes then include in list
+        // now for each word in A we check whether freq of each word is less than its maxfreq
+        // if yes then exclude else include in result
 
         int maxFrequency[] = new int[26];
         List<String> result = new ArrayList();
