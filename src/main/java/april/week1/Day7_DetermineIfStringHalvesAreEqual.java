@@ -5,10 +5,10 @@ public class Day7_DetermineIfStringHalvesAreEqual {
         String s1 = s.substring(0, s.length()/2);
         String s2 = s.substring(s1.length());
 
-        return s1.chars().filter(c -> isVowel((char)c)).count() == s2.chars().filter(c -> isVowel((char)c)).count();
+        return s1.chars().filter(this::isVowel).count() == s2.chars().filter(this::isVowel).count();
     }
 
-    private boolean isVowel(char c) {
+    private boolean isVowel(int c) {
         if (c > 96) {
             c -= 32;
         }
