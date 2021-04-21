@@ -2,6 +2,7 @@ package april.week3;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 public class Day6_NArrayTreePreorderTraversal {
     public List<Integer> preorder(Node root) {
@@ -18,6 +19,28 @@ public class Day6_NArrayTreePreorderTraversal {
             dfs(node, res);
         }
     }
+
+    public List<Integer> preorderIterative(Node root) {
+        List<Integer> res = new ArrayList();
+        if (root == null) {
+            return res;
+        }
+        Stack<Node> stk = new Stack();
+        stk.push(root);
+
+        while (!stk.isEmpty()) {
+            Node node = stk.pop();
+            res.add(node.val);
+            int i=node.children.size() - 1;
+            for (; i>=0; i--) {
+                if (node.children.get(i) != null) {
+                    stk.push(node.children.get(i));
+                }
+            }
+        }
+        return res;
+    }
+
     private static class Node {
         int val;
         List<Node> children;
